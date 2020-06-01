@@ -85,7 +85,17 @@ class _MyAppState extends State<MyApp> {
             future: futureWeather,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data.main);
+                return Column(
+                  children: <Widget>[
+                    Text(snapshot.data.main),
+                    Text(snapshot.data.country),
+                    Text(snapshot.data.cityName),
+                    Text('${snapshot.data.temp}'),
+                    Text('${snapshot.data.humidty}'),
+                    Text('${snapshot.data.wind}'),
+                    Text('${snapshot.data.cloud}'),
+                  ],
+                );
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
