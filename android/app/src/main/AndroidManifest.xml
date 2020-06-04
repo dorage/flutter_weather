@@ -9,6 +9,8 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="weather_app"
         android:icon="@mipmap/ic_launcher">
+        <!-- GOOGLE MAP API KEY -->
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAvuYMPGFLyeaHcD6T6pgoPZqHP0NtUz5s"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
